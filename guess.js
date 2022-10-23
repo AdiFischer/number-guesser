@@ -1,6 +1,6 @@
 /*
-create a program that guesses a num between 1-10 then asks us to guesss that num.
-if it hugher say "too high" and ask again.
+create a program that guesses a num between 1-10 then asks us to guess that num.
+if it higher say "too high" and ask again.
 if lower say "too low" and ask again.
 if it's the right num say "congratulations' and exit".
 */
@@ -14,7 +14,8 @@ let userGuessedRight = false
 let numberChosen = Math.ceil(Math.random() * 10)//ask for a guess of our num.
 //console.log(numberChosen)
 //}
-while(!userGuessedRight) {
+let guess = ""
+while(numberChosen != guess) {
 let guess = readline.question("What's your guess?")
 if (guess == numberChosen)// is it equal to
 {
@@ -24,12 +25,12 @@ if (guess == numberChosen)// is it equal to
 if (guess > numberChosen)
 {
     console.log("Too High")
-    //userGuessedRight = true - if not comminted out, then chang to false
+    //userGuessedRight = false 
 }
 if (guess < numberChosen)
 {
     console.log("Too Low")
-    //userGuessedRight = true
+    //userGuessedRight = false
 }
 // console.log(guess)
 //}
